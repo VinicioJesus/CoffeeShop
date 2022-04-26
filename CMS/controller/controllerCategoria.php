@@ -9,7 +9,7 @@
      *************************************************/
     
      //função para receber dados da View e encaminhar para a model (inserir)
-    function inserirContato($dadosCategoria)
+    function inserirCategoria($dadosCategoria)
     
     {   
         //Validação para verificar se o objeto está vazio
