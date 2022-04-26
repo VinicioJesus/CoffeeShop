@@ -1,0 +1,30 @@
+.icone-section {
+  width: 100vw;
+  height: 12vh;
+  background-color: #355bc5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.icone-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+a button:hover {
+  /* mudar de cor quando clicar */
+  background-color: black;
+}
+
+a button {
+  background-color: #c53535;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

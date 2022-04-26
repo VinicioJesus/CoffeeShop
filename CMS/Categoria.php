@@ -5,14 +5,10 @@
     {
 
         //Valida se a variavel de sessão dadosContato não está vazia  
-        if (!empty($_SESSION['dadosContato']))
+        if (!empty($_SESSION['dadosCategoria']))
         {            
-            $id = $_SESSION['dadosContato']['id'];
-            $nome = $_SESSION['dadosContato']['nome'];
-            $telefone = $_SESSION['dadosContato']['telefone'];
-            $celular = $_SESSION['dadosContato']['celular'];
-            $email = $_SESSION['dadosContato']['email'];
-            $obs = $_SESSION['dadosContato']['obs'];
+            $id = $_SESSION['dadosCategoria']['id'];
+            $nome = $_SESSION['dadosCategoria']['nome'];            
         }
     }
 ?>
@@ -28,7 +24,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/secaoIcones.css">
-    <title>Dashboard</title>
+    <title>DashCategoria</title>
 </head>
 <body>
     <header>
@@ -74,36 +70,34 @@
             <table id="tblConsulta" >
                 <tr>
                     <td id="tblTitulo" colspan="6">
-                        <h1> Consulta de Contatos.</h1>
+                        <h1> Consulta de Categoria.</h1>
                     </td>
                 </tr>
                 <tr id="tblLinhas">
                     <td class="tblColunas destaque"> Nome </td>
-                    <td class="tblColunas destaque"> Email </td>
-                    <td class="tblColunas destaque"> Mensagem </td>
+                    
                     <td class="tblColunas destaque"> Opções </td>
                 </tr>
 
                 <?php 
                     //import do arquivo do controller para solicitar a listagem dos dados
-                    require_once('./controller/controllerContatos.php');
+                    require_once('./controller/controllerCategoria.php');
                     //chama a função que vai retornar os dados do contato
-                    $listContato = listarContato();
+                    $listCategoria = listarCategoria();
 
                     // estrutura de repetição para retorar os dados do array
                     // e printar na tela
-                    foreach ($listContato as $item)
+                    foreach ($listCategoria as $item)
                     {                  
                     
                 ?>        
             
                 <tr id="tblLinhas">
                     <td class="tblColunas registros"><?=$item['nome']?></td>
-                    <td class="tblColunas registros"><?=$item['email']?></td>
-                    <td class="tblColunas registros"><?=$item['mensagem']?></td>
+                    
                 
                     <td class="tblColunas registros">
-                        <a href="router.php?component=contatos&action=deletar&id=<?=$item['id']?>">
+                        <a href="router.php?component=categorias&action=deletar&id=<?=$item['id']?>">
 
                             <img src="img/trash.png" alt="Excluir" title="Excluir" class="excluir">
 
