@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/secaoIcones.css">
-    <title>Dashboard</title>
+    <title>DashboardContato</title>
 </head>
 <body>
     <header>
